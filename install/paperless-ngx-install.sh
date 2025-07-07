@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 color
@@ -60,7 +60,7 @@ $STD apt-get install -y --no-install-recommends \
   zlib1g \
   tesseract-ocr \
   tesseract-ocr-eng
-  
+
 cd /tmp
 wget -q https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10040/ghostscript-10.04.0.tar.gz
 $STD tar -xzf ghostscript-10.04.0.tar.gz

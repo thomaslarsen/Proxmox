@@ -3,7 +3,7 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Authors: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
   clear
@@ -56,7 +56,7 @@ function default_settings() {
 function update_script() {
   if [[ ! -f /etc/systemd/system/frigate.service ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
   msg_error "To update Frigate, create a new container and transfer your configuration."
-  exit  
+  exit
 }
 
 start

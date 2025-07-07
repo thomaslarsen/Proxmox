@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 
 color
@@ -30,7 +30,7 @@ msg_ok "Installed Alpine-Vaultwarden"
 
 msg_info "Installing Web-Vault"
 $STD apk add vaultwarden-web-vault
-msg_ok "Installed Web-Vault" 
+msg_ok "Installed Web-Vault"
 
 msg_info "Starting Alpine-Vaultwarden"
 $STD rc-service vaultwarden start

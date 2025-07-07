@@ -4,12 +4,12 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: havardthom
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
-cat <<"EOF"     
-    _   __           __ __  _ 
+cat <<"EOF"
+    _   __           __ __  _
    / | / /__  ____  / // / (_)
   /  |/ / _ \/ __ \/ // /_/ /
  / /|  /  __/ /_/ /__  __/ /

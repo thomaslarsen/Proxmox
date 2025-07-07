@@ -3,17 +3,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
   clear
   cat <<"EOF"
- _    __            ____ _       __               __         
-| |  / /___ ___  __/ / /| |     / /___ __________/ /__  ____ 
+ _    __            ____ _       __               __
+| |  / /___ ___  __/ / /| |     / /___ __________/ /__  ____
 | | / / __ `/ / / / / __/ | /| / / __ `/ ___/ __  / _ \/ __ \
 | |/ / /_/ / /_/ / / /_ | |/ |/ / /_/ / /  / /_/ /  __/ / / /
-|___/\__,_/\__,_/_/\__/ |__/|__/\__,_/_/   \__,_/\___/_/ /_/ 
-                                                             
+|___/\__,_/\__,_/_/\__/ |__/|__/\__,_/_/   \__,_/\___/_/ /_/
+
 EOF
 }
 header_info
@@ -57,7 +57,7 @@ function update_script() {
     msg_error "No ${APP} Installation Found!"
     exit
   fi
- 
+
   VAULT=$(curl -s https://api.github.com/repos/dani-garcia/vaultwarden/releases/latest |
     grep "tag_name" |
     awk '{print substr($2, 2, length($2)-3) }')

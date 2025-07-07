@@ -4,17 +4,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-  _______               _ _ 
+  _______               _ _
  /_  __(_)___ _____    (_|_)
-  / / / / __ `/ __ \  / / / 
- / / / / /_/ / / / / / / /  
-/_/ /_/\__,_/_/ /_/_/ /_/   
-                 /___/      
+  / / / / __ `/ __ \  / / /
+ / / / / /_/ / / / / / / /
+/_/ /_/\__,_/_/ /_/_/ /_/
+                 /___/
 EOF
 }
 header_info
@@ -79,7 +79,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   mkdir -p ./src/server/public >/dev/null 2>&1
   cp -r ./geo ./src/server/public >/dev/null 2>&1
   pnpm build:server >/dev/null 2>&1
-  mv /opt/.env /opt/tianji/src/server/.env 
+  mv /opt/.env /opt/tianji/src/server/.env
   cd src/server
   pnpm db:migrate:apply >/dev/null 2>&1
   echo "${RELEASE}" >/opt/${APP}_version.txt

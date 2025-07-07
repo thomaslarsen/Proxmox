@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 color
@@ -28,7 +28,7 @@ rm gokapi-linux_amd64.zip
 chmod +x /opt/gokapi/gokapi-linux_amd64
 msg_ok "Installed Gokapi"
 
-msg_info "Creating Service" 
+msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/gokapi.service
 [Unit]
 Description=gokapi

@@ -4,7 +4,7 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck (tteckster)
 # Co-Author: Scorpoon
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
@@ -67,7 +67,7 @@ gitVersionNumber=$(git rev-parse HEAD)
 if [[ "${gitVersionNumber}" != "$(cat /opt/${APP}_version.txt)" ]] || [[ ! -f /opt/${APP}_version.txt ]]; then
   mkdir /opt/fenrus-data-backup
   cp -r "/opt/${APP}/data/" /opt/fenrus-data-backup/data
-  if [[ ! -d /opt/fenrus-data-backup/data ]]; then msg_error "Backup of data folder failed! exiting..."; rm -r /opt/fenrus-data-backup/; exit; fi 
+  if [[ ! -d /opt/fenrus-data-backup/data ]]; then msg_error "Backup of data folder failed! exiting..."; rm -r /opt/fenrus-data-backup/; exit; fi
   export DOTNET_CLI_TELEMETRY_OPTOUT=1
   dotnet publish -c Release -o "/opt/${APP}/" Fenrus.csproj
   cp -r /opt/fenrus-data-backup/data/ "/opt/${APP}/"

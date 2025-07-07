@@ -4,7 +4,7 @@
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/ErsatzTV/ErsatzTV
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
@@ -45,7 +45,7 @@ if [[ "$CTTYPE" == "0" ]]; then
 fi
 msg_ok "Set Up Hardware Acceleration"
 
-msg_info "Installing ErsatzTV" 
+msg_info "Installing ErsatzTV"
 RELEASE=$(curl -s https://api.github.com/repos/ErsatzTV/ErsatzTV/releases | grep -oP '"tag_name": "\K[^"]+' | head -n 1)
 wget -qO- "https://github.com/ErsatzTV/ErsatzTV/releases/download/${RELEASE}/ErsatzTV-${RELEASE}-linux-x64.tar.gz" | tar -xz -C /opt
 mv "/opt/ErsatzTV-${RELEASE}-linux-x64" /opt/ErsatzTV
@@ -60,8 +60,8 @@ After=multi-user.target
 [Service]
 Type=simple
 User=root
-WorkingDirectory=/opt/ErsatzTV 
-ExecStart=/opt/ErsatzTV/ErsatzTV  
+WorkingDirectory=/opt/ErsatzTV
+ExecStart=/opt/ErsatzTV/ErsatzTV
 Restart=always
 RestartSec=30
 

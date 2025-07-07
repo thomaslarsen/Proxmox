@@ -4,7 +4,7 @@
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/alexta69/metube
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -60,7 +60,7 @@ $STD node_modules/.bin/ng build
 cd /opt/metube
 $STD pip3 install pipenv
 $STD pipenv install
-mkdir -p /opt/metube_downloads /opt/metube_downloads/.metube /opt/metube_downloads/music /opt/metube_downloads/videos 
+mkdir -p /opt/metube_downloads /opt/metube_downloads/.metube /opt/metube_downloads/music /opt/metube_downloads/videos
 cat <<EOF >/opt/metube/.env
 DOWNLOAD_DIR=/opt/metube_downloads
 STATE_DIR=/opt/metube_downloads/.metube

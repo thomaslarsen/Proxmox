@@ -4,17 +4,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
- _       __      ____          
+ _       __      ____
 | |     / /___ _/ / /___  _____
 | | /| / / __ `/ / / __ \/ ___/
-| |/ |/ / /_/ / / / /_/ (__  ) 
-|__/|__/\__,_/_/_/\____/____/  
-                               
+| |/ |/ / /_/ / / / /_/ (__  )
+|__/|__/\__,_/_/_/\____/____/
+
 EOF
 }
 header_info
@@ -81,7 +81,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   msg_ok "Apache2 Reloaded"
 
   msg_info "Cleaning Up"
-  rm -R /opt/v${RELEASE}.zip 
+  rm -R /opt/v${RELEASE}.zip
   msg_ok "Cleaned"
   msg_ok "Updated Successfully"
 else

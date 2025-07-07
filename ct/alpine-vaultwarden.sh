@@ -3,17 +3,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
   clear
   cat <<"EOF"
- _    __            ____                          __         
-| |  / /___ ___  __/ / /__      ______ __________/ /__  ____ 
+ _    __            ____                          __
+| |  / /___ ___  __/ / /__      ______ __________/ /__  ____
 | | / / __ `/ / / / / __/ | /| / / __ `/ ___/ __  / _ \/ __ \
 | |/ / /_/ / /_/ / / /_ | |/ |/ / /_/ / /  / /_/ /  __/ / / /
-|___/\__,_/\__,_/_/\__/ |__/|__/\__,_/_/   \__,_/\___/_/ /_/ 
- Alpine                                                 
+|___/\__,_/\__,_/_/\__/ |__/|__/\__,_/_/   \__,_/\___/_/ /_/
+ Alpine
 
 EOF
 }
@@ -85,7 +85,7 @@ function update_script() {
           sed -i "s|\"admin_token\": .*|\"admin_token\": \"${TOKEN}\",|" /var/lib/vaultwarden/config.json
         fi
         rc-service vaultwarden restart -q
-      fi      
+      fi
       clear
       exit
       ;;

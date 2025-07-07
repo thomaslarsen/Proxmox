@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 color
@@ -43,16 +43,16 @@ $STD npm install --only=prod --omit=dev
 
 cat <<EOF >/opt/magicmirror/config/config.js
 let config = {
-        address: "0.0.0.0",     
+        address: "0.0.0.0",
         port: 8080,
-        basePath: "/",  
-        ipWhitelist: [],        
-        useHttps: false,              
-        httpsPrivateKey: "",    
-        httpsCertificate: "",   
+        basePath: "/",
+        ipWhitelist: [],
+        useHttps: false,
+        httpsPrivateKey: "",
+        httpsCertificate: "",
         language: "en",
         locale: "en-US",
-        logLevel: ["INFO", "LOG", "WARN", "ERROR"], 
+        logLevel: ["INFO", "LOG", "WARN", "ERROR"],
         timeFormat: 24,
         units: "metric",
         serverOnly:  true,

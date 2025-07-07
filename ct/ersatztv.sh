@@ -4,7 +4,7 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/ErsatzTV/ErsatzTV/
 
 
@@ -13,10 +13,10 @@ clear
 cat <<"EOF"
     ______                __      _______    __
    / ____/_____________ _/ /_____/_  __/ |  / /
-  / __/ / ___/ ___/ __ `/ __/_  / / /  | | / / 
- / /___/ /  (__  ) /_/ / /_  / /_/ /   | |/ /  
-/_____/_/  /____/\__,_/\__/ /___/_/    |___/   
-                                                         
+  / __/ / ___/ ___/ __ `/ __/_  / / /  | | / /
+ / /___/ /  (__  ) /_/ / /_  / /_/ /   | |/ /
+/_____/_/  /____/\__,_/\__/ /___/_/    |___/
+
 EOF
 }
 header_info

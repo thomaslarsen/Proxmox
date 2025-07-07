@@ -3,12 +3,12 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-  ______                           ___       __          _ 
+  ______                           ___       __          _
  /_  __/___ __________ ___  ____  /   | ____/ /___ ___  (_)___
   / / / __ `/ ___/ __ `__ \/ __ \/ /| |/ __  / __ `__ \/ / __ \
  / / / /_/ (__  ) / / / / / /_/ / ___ / /_/ / / / / / / / / / /

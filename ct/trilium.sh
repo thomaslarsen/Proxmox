@@ -3,17 +3,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-  ______     _ ___               
- /_  __/____(_) (_)_  ______ ___ 
+  ______     _ ___
+ /_  __/____(_) (_)_  ______ ___
   / / / ___/ / / / / / / __ `__ \
  / / / /  / / / / /_/ / / / / / /
-/_/ /_/  /_/_/_/\__,_/_/ /_/ /_/ 
-                                                                      
+/_/ /_/  /_/_/_/\__,_/_/ /_/ /_/
+
 EOF
 }
 header_info
@@ -56,7 +56,7 @@ function update_script() {
 header_info
 if [[ ! -d /opt/trilium ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
 RELEASE=$(curl -s https://api.github.com/repos/TriliumNext/Notes/releases/latest | grep "tag_name" | awk '{print substr($2, 2, length($2)-3) }')
-    
+
 msg_info "Stopping ${APP}"
 systemctl stop trilium.service
 sleep 1

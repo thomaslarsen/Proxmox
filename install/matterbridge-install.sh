@@ -4,7 +4,7 @@
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/Luligu/matterbridge/
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
@@ -33,7 +33,7 @@ $STD apt-get update
 $STD apt-get install -y nodejs
 msg_ok "Installed Node.js"
 
-msg_info "Install Matterbridge" 
+msg_info "Install Matterbridge"
 mkdir -p /root/Matterbridge
 $STD npm install -g matterbridge
 msg_ok "Installed Matterbridge"

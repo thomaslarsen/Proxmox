@@ -4,17 +4,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-    ___       __                 __                  __               
+    ___       __                 __                  __
    /   | ____/ /   _____  ____  / /___  __________  / /   ____  ____ _
   / /| |/ __  / | / / _ \/ __ \/ __/ / / / ___/ _ \/ /   / __ \/ __ `/
- / ___ / /_/ /| |/ /  __/ / / / /_/ /_/ / /  /  __/ /___/ /_/ / /_/ / 
-/_/  |_\__,_/ |___/\___/_/ /_/\__/\__,_/_/   \___/_____/\____/\__, /  
-                                                             /____/   
+ / ___ / /_/ /| |/ /  __/ / / / /_/ /_/ / /  /  __/ /___/ /_/ / /_/ /
+/_/  |_\__,_/ |___/\___/_/ /_/\__/\__,_/_/   \___/_____/\____/\__, /
+                                                             /____/
 EOF
 }
 header_info
@@ -78,7 +78,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   pip install -r requirements.txt &>/dev/null
   python3 manage.py collectstatic --noinput &>/dev/null
   python3 manage.py migrate &>/dev/null
-  
+
   mv /opt/frontend.env /opt/adventurelog/frontend/.env
   cd /opt/adventurelog/frontend
   pnpm install &>/dev/null

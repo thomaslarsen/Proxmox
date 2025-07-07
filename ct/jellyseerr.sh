@@ -3,7 +3,7 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
@@ -75,7 +75,7 @@ then
   exit
 fi
 systemctl stop jellyseerr
-export CYPRESS_INSTALL_BINARY=0 
+export CYPRESS_INSTALL_BINARY=0
 pnpm install --frozen-lockfile &>/dev/null
 export NODE_OPTIONS="--max-old-space-size=3072"
 pnpm build &>/dev/null

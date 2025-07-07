@@ -4,17 +4,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-    __  ___                         
+    __  ___
    /  |/  /__  ____ ___  ____  _____
   / /|_/ / _ \/ __ `__ \/ __ \/ ___/
- / /  / /  __/ / / / / / /_/ (__  ) 
-/_/  /_/\___/_/ /_/ /_/\____/____/  
-                                    
+ / /  / /  __/ / / / / / /_/ (__  )
+/_/  /_/\___/_/ /_/ /_/\____/____/
+
 EOF
 }
 header_info
@@ -65,13 +65,13 @@ then
   exit
 fi
 systemctl stop memos
-cd /opt/memos/web 
+cd /opt/memos/web
 pnpm i --frozen-lockfile &>/dev/null
 pnpm build &>/dev/null
 cd /opt/memos
 mkdir -p /opt/memos/server/dist
 cp -r web/dist/* /opt/memos/server/dist/
-cp -r web/dist/* /opt/memos/server/router/frontend/dist/ 
+cp -r web/dist/* /opt/memos/server/router/frontend/dist/
 go build -o /opt/memos/memos -tags=embed bin/memos/main.go &>/dev/null
 systemctl start memos
 msg_ok "Updated $APP"

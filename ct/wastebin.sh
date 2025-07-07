@@ -4,19 +4,19 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/matze/wastebin
 
 
 function header_info {
 clear
 cat <<"EOF"
- _       __           __       __    _     
-| |     / /___ ______/ /____  / /_  (_)___ 
+ _       __           __       __    _
+| |     / /___ ______/ /____  / /_  (_)___
 | | /| / / __ `/ ___/ __/ _ \/ __ \/ / __ \
 | |/ |/ / /_/ (__  ) /_/  __/ /_/ / / / / /
-|__/|__/\__,_/____/\__/\___/_.___/_/_/ /_/ 
-                                            
+|__/|__/\__,_/____/\__/\___/_.___/_/_/ /_/
+
 EOF
 }
 header_info

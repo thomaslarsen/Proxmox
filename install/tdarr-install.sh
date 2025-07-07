@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 color
@@ -62,7 +62,7 @@ Group=root
 
 Type=simple
 WorkingDirectory=/opt/tdarr/Tdarr_Server
-ExecStartPre=/opt/tdarr/Tdarr_Updater                  
+ExecStartPre=/opt/tdarr/Tdarr_Updater
 ExecStart=/opt/tdarr/Tdarr_Server/Tdarr_Server
 TimeoutStopSec=20
 KillMode=process

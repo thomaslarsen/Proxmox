@@ -4,7 +4,7 @@
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 # Source: https://github.com/gnmyt/myspeed
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -58,7 +58,7 @@ ExecStart=/usr/bin/node server
 Restart=always
 User=root
 Environment=NODE_ENV=production
-WorkingDirectory=/opt/myspeed 
+WorkingDirectory=/opt/myspeed
 
 [Install]
 WantedBy=multi-user.target

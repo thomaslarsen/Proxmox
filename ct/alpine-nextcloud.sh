@@ -3,7 +3,7 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
   clear
@@ -64,7 +64,7 @@ function update_script() {
     CHOICE=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "SUPPORT" --radiolist --cancel-button Exit-Script "Spacebar = Select"  11 58 3 \
       "1" "Nextcloud Login Credentials" ON \
       "2" "Renew Self-signed Certificate" OFF \
-      3>&1 1>&2 2>&3)      
+      3>&1 1>&2 2>&3)
     exit_status=$?
     if [ $exit_status == 1 ]; then
       clear

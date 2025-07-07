@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 color
@@ -260,7 +260,7 @@ hostsFile:
 #logPrivacy: false
 
 # optional: add EDE error codes to dns response
-#ede: 
+#ede:
   # enabled if true, Default: false
   #enable: true
 EOF

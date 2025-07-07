@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 clear
 if command -v pveversion >/dev/null 2>&1; then echo -e "⚠️  Can't Run from the Proxmox Shell"; exit; fi
@@ -30,12 +30,12 @@ done
 clear
 function header_info {
     cat <<"EOF"
-    __  __                        ___              _      __              __     ______              
-   / / / /___  ____ ___  ___     /   |  __________(_)____/ /_____ _____  / /_   / ____/___  ________ 
+    __  __                        ___              _      __              __     ______
+   / / / /___  ____ ___  ___     /   |  __________(_)____/ /_____ _____  / /_   / ____/___  ________
   / /_/ / __ \/ __ `__ \/ _ \   / /| | / ___/ ___/ / ___/ __/ __ `/ __ \/ __/  / /   / __ \/ ___/ _ \
  / __  / /_/ / / / / / /  __/  / ___ |(__  |__  ) (__  ) /_/ /_/ / / / / /_   / /___/ /_/ / /  /  __/
-/_/ /_/\____/_/ /_/ /_/\___/  /_/  |_/____/____/_/____/\__/\__,_/_/ /_/\__/   \____/\____/_/   \___/ 
-                                     RESTORE FROM BACKUP                                
+/_/ /_/\____/_/ /_/ /_/\___/  /_/  |_/____/____/_/____/\__/\__,_/_/ /_/\__/   \____/\____/_/   \___/
+                                     RESTORE FROM BACKUP
 EOF
 }
 

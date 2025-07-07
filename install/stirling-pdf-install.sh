@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
 color
@@ -49,7 +49,7 @@ $STD pip3 install \
   opencv-python-headless \
   unoconv \
   pngquant \
-  WeasyPrint 
+  WeasyPrint
 msg_ok "Installed Python Dependencies"
 
 msg_info "Installing Azul Zulu"

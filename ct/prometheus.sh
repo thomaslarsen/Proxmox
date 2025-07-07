@@ -3,17 +3,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-    ____                            __  __                   
+    ____                            __  __
    / __ \_________  ____ ___  ___  / /_/ /_  ___  __  _______
   / /_/ / ___/ __ \/ __  __ \/ _ \/ __/ __ \/ _ \/ / / / ___/
- / ____/ /  / /_/ / / / / / /  __/ /_/ / / /  __/ /_/ (__  ) 
-/_/   /_/   \____/_/ /_/ /_/\___/\__/_/ /_/\___/\__,_/____/  
- 
+ / ____/ /  / /_/ / / / / / /  __/ /_/ / / /  __/ /_/ (__  )
+/_/   /_/   \____/_/ /_/ /_/\___/\__/_/ /_/\___/\__,_/____/
+
 EOF
 }
 header_info
@@ -60,7 +60,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   msg_info "Stopping ${APP}"
   systemctl stop prometheus
   msg_ok "Stopped ${APP}"
-  
+
   msg_info "Updating ${APP} to ${RELEASE}"
   wget -q https://github.com/prometheus/prometheus/releases/download/v${RELEASE}/prometheus-${RELEASE}.linux-amd64.tar.gz
   tar -xf prometheus-${RELEASE}.linux-amd64.tar.gz

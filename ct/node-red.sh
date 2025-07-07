@@ -3,17 +3,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
     _   __          __        ____           __
    / | / /___  ____/ /__     / __ \___  ____/ /
-  /  |/ / __ \/ __  / _ \   / /_/ / _ \/ __  / 
- / /|  / /_/ / /_/ /  __/  / _, _/  __/ /_/ /  
-/_/ |_/\____/\__,_/\___/  /_/ |_|\___/\__,_/   
- 
+  /  |/ / __ \/ __  / _ \   / /_/ / _ \/ __  /
+ / /|  / /_/ / /_/ /  __/  / _, _/  __/ /_/ /
+/_/ |_/\____/\__,_/\___/  /_/ |_|\___/\__,_/
+
 EOF
 }
 header_info
@@ -109,7 +109,7 @@ THEME=$(whiptail --backtitle "Proxmox VE Helper Scripts" --title "NODE-RED THEME
     "zenburn" "" OFF \
     3>&1 1>&2 2>&3)
 header_info
-msg_info "Installing ${THEME} Theme"    
+msg_info "Installing ${THEME} Theme"
 cd /root/.node-red
 sed -i 's|// theme: ".*",|theme: "",|g' /root/.node-red/settings.js
 npm install @node-red-contrib-themes/theme-collection &>/dev/null

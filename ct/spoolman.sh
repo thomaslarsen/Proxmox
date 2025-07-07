@@ -4,17 +4,17 @@ source <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/misc/build
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
 cat <<"EOF"
-   _____                   __                    
-  / ___/____  ____  ____  / /___ ___  ____ _____ 
+   _____                   __
+  / ___/____  ____  ____  / /___ ___  ____ _____
   \__ \/ __ \/ __ \/ __ \/ / __ `__ \/ __ `/ __ \
  ___/ / /_/ / /_/ / /_/ / / / / / / / /_/ / / / /
-/____/ .___/\____/\____/_/_/ /_/ /_/\__,_/_/ /_/ 
-    /_/                                                         
+/____/ .___/\____/\____/_/_/ /_/ /_/\__,_/_/ /_/
+    /_/
 EOF
 }
 header_info
@@ -71,7 +71,7 @@ if [[ ! -f /opt/${APP}_version.txt ]] || [[ "${RELEASE}" != "$(cat /opt/${APP}_v
   cd /opt
   rm -rf spoolman_bak
   mv spoolman spoolman_bak
-  wget -q https://github.com/Donkie/Spoolman/releases/download/${RELEASE}/spoolman.zip 
+  wget -q https://github.com/Donkie/Spoolman/releases/download/${RELEASE}/spoolman.zip
   unzip -q spoolman.zip -d spoolman
   cd spoolman
   pip3 install -r requirements.txt >/dev/null 2>&1

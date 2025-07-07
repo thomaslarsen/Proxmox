@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/thomaslarsen/Proxmox/raw/main/LICENSE
 
 function header_info {
   clear
@@ -423,4 +423,4 @@ if [ "$START_VM" == "yes" ]; then
   msg_ok "Started Debian 12 VM"
 fi
 msg_ok "Completed Successfully!\n"
-echo "More Info at https://github.com/tteck/Proxmox/discussions/1988"
+echo "More Info at https://github.com/thomaslarsen/Proxmox/discussions/1988"
